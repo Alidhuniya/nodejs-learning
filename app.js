@@ -12,3 +12,6 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+console.log(__filename); //C:\Users\meali\Desktop\nodejs\app.js
+console.log(__dirname); //C:\Users\meali\Desktop\nodejs
