@@ -1,11 +1,11 @@
-const fs = require("fs")
+const {writeFile, writeFileSync} = require("fs");
 
-fs.readFile("hell.txt", "utf-8", (error, data) => {
+const newItem = "This is awesome 2";
+
+writeFile("hell.txt", newItem, { flag : "a"}, (error) => {
     if(error) {
         console.log(error);
         return;
     }
-    console.log(data);
+    console.log("content written!");
 })
-
-console.log("log from outside");
