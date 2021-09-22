@@ -11,5 +11,6 @@
   "license": "ISC",
   "volta": {
     "node": "14.17.6"
-  }
+  },
+  "type": "module"
 }
