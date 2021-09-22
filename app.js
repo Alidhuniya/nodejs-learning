@@ -1,17 +1,11 @@
-const http = require('http');
+const fs = require("fs")
 
-const hostname = '127.0.0.1';
-const port = 3000;
+fs.readFile("hell.txt", "utf-8", (error, data) => {
+    if(error) {
+        console.log(error);
+        return;
+    }
+    console.log(data);
+})
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-
-console.log(__filename); //C:\Users\meali\Desktop\nodejs\app.js
-console.log(__dirname); //C:\Users\meali\Desktop\nodejs
+console.log("log from outside");
